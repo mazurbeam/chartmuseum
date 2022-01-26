@@ -1,11 +1,16 @@
 debug = false
 
 logLevel = "ERROR"
-defaultEntryPoints = ["http"]
+defaultEntryPoints = ["https","http"]
 
 [entryPoints]
   [entryPoints.http]
   address = ":80"
+    [entryPoints.http.redirect]
+    entryPoint = "https"
+  [entryPoints.https]
+  address = ":443"
+  [entryPoints.https.tls]
 
 [retry]
 
@@ -22,4 +27,4 @@ onHostRule = true
 [acme.httpChallenge]
 entryPoint = "http"
 [[acme.domains]]
-main="chartmuseum.stackendsolutions.com"
+main="chartmusem.stackendsolutions.com"

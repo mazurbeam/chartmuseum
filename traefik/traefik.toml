@@ -1,0 +1,25 @@
+debug = false
+
+logLevel = "ERROR"
+defaultEntryPoints = ["http"]
+
+[entryPoints]
+  [entryPoints.http]
+  address = ":80"
+
+[retry]
+
+[docker]
+endpoint = "unix:///var/run/docker.sock"
+watch = true
+exposedByDefault = false
+
+[acme]
+email = "admin@stackendsolutions.com"
+storage = "acme.json"
+entryPoint = "https"
+onHostRule = true
+[acme.httpChallenge]
+entryPoint = "http"
+[[acme.domains]]
+main="chartmuseum.stackendsolutions.com"

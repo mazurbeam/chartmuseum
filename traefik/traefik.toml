@@ -27,4 +27,4 @@ onHostRule = true
 [acme.httpChallenge]
 entryPoint = "http"
 [[acme.domains]]
-main="chartmusem.stackendsolutions.com"
+main="chartmuseum.stackendsolutions.com"

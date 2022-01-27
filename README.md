@@ -29,5 +29,5 @@ helm package .
 
 # now you should have a .tgz file in the directory
 
-curl -u <username>:<password> --data-binary "@NAME-0.1.0.tgz" https://chartmuseum.stackendsolutions.com/
+curl -u <username>:<password> --data-binary "@NAME-0.1.0.tgz" https://chartmuseum.stackendsolutions.com/api/charts
 ```
